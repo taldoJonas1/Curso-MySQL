@@ -1,11 +1,11 @@
 use sakila;
 
 select 
-    customer.customer_id, 
-    customer.first_name, 
-    customer.last_name, 
-    payment.rental_id,
-    payment.amount
-from customer
-join payment on customer.customer_id = payment.payment_id
+    cus.customer_id, 
+    cus.first_name, 
+    cus.last_name, 
+    pay.rental_id,
+    pay.amount
+from customer cus -- apelido ALIAS
+join payment pay on cus.customer_id = pay.payment_id
 -- JOIN junta duas tabelas
